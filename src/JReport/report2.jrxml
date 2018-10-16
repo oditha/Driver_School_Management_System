@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report2" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="72d3c85a-6c46-4515-8bae-415e0740458e">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="178"/>
+	<parameter name="payid" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+studentpayment.idStudentPayment,
+studentpayment.idstudents,
+studentpayment.date,
+studentpayment.amount,
+studentpayment.Description,
+studentpayment.isDelete,
+students.idstudents,
+students.RegNo,
+students.NIC,
+students.PassportNo,
+students.OldDLNo,
+students.FullName,
+students.LPNumber,
+students.DOB,
+students.Gender,
+students.AddressPermenent,
+students.AddressResident,
+students.CourseFee,
+students.TpHome,
+students.TpBusiness,
+students.TpPersonal,
+students.Image,
+students.RegisterDate,
+students.StudentPosition
+FROM
+studentpayment
+INNER JOIN students ON studentpayment.idstudents = students.idstudents
+WHERE
+studentpayment.idStudentPayment=$P{payid}
+]]>
+	</queryString>
+	<field name="idStudentPayment" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idstudents" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="amount" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Description" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="isDelete" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="RegNo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NIC" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PassportNo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OldDLNo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FullName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LPNumber" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DOB" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Gender" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="AddressPermenent" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="AddressResident" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CourseFee" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TpHome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TpBusiness" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TpPersonal" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Image" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="RegisterDate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="StudentPosition" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="246" splitType="Stretch">
+			<staticText>
+				<reportElement x="169" y="107" width="217" height="28" uuid="a081eb71-b7ca-4e9f-aead-c5b1a57aeeec"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NEW KAMAL LEARNERS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="202" y="135" width="150" height="20" uuid="fbc845fe-faf2-4d52-91b1-8621e29decff"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[DS-444 Rikillagaskada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="196" y="163" width="167" height="26" uuid="b0b49c3f-b5ec-4327-af50-60c7a78ae15f"/>
+				<textElement textAlignment="Center">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[PAYMENT INVOICE]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="221" width="555" height="1" uuid="7eacd40a-485d-4f1c-8022-189d399018e4"/>
+			</line>
+			<image>
+				<reportElement x="144" y="0" width="267" height="85" uuid="67d84575-6521-4caa-8706-1e3788111026"/>
+				<imageExpression><![CDATA["C:\\Program Files\\LogoNK2.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="109" splitType="Stretch">
+			<staticText>
+				<reportElement x="27" y="42" width="100" height="20" uuid="99ea3f0d-6eea-47d4-bd14-c29e92a43488"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Recipt No:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="76" width="82" height="20" uuid="82a9da88-8279-46f7-851b-3ded449234f5"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Payment Date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="8" width="73" height="20" uuid="74f732de-cc45-4a5a-a2dd-4679e2076ca1"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Full Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="319" y="76" width="73" height="20" uuid="d6451505-9af4-4153-9b7b-dcd2023ac6d2"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Cource Fee:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="131" y="76" width="100" height="20" uuid="d617788e-b815-47c7-ab29-acbdc593ed01"/>
+				<textElement>
+					<font fontName="Century" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="422" y="76" width="73" height="20" uuid="05d69fae-b5d0-40c4-89f9-04217b739a59"/>
+				<textElement>
+					<font fontName="Century" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CourseFee}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="8" width="453" height="20" uuid="55bd9afa-ca9f-413a-ab91-431f303062e7"/>
+				<textElement>
+					<font fontName="Century" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FullName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="129" y="42" width="100" height="20" uuid="f96d02a7-54f7-49db-8dea-f15f79cae8a6"/>
+				<textElement>
+					<font fontName="Century" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{idStudentPayment}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="393" y="76" width="27" height="20" uuid="75a2b33b-82fd-4f90-844a-df80bf4d5e99"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[RS.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="393" y="96" width="102" height="1" uuid="dc73426a-4708-4d2f-a33e-fa7e3729f05c"/>
+			</line>
+			<line>
+				<reportElement mode="Opaque" x="393" y="98" width="102" height="1" forecolor="#000000" backcolor="#FFFFFF" uuid="0e2d4d30-dfac-4959-bb5e-f2093c773db5"/>
+				<graphicElement fill="Solid"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement x="27" y="33" width="100" height="20" uuid="9b5feb24-a7be-402f-bb63-ada80fcb9970"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="319" y="33" width="100" height="20" uuid="1e8eaacf-5377-4a07-9cc7-8e73cfa83b41"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="190" splitType="Stretch">
+			<textField>
+				<reportElement x="346" y="2" width="100" height="20" uuid="71b11216-f351-4c65-bba2-6e0e90803a14"/>
+				<textElement>
+					<font fontName="Century" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="28" y="2" width="100" height="20" uuid="b8ad22a0-3549-44e7-94cf-5b1f445f7123"/>
+				<textElement>
+					<font fontName="Century" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Description}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="319" y="2" width="27" height="20" uuid="00f82873-6f6c-4de1-8057-9fe6b47d0972"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[RS.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="319" y="24" width="102" height="1" uuid="f5de48cb-ee19-420b-a88c-fc58c4149c4f"/>
+			</line>
+			<line>
+				<reportElement mode="Opaque" x="319" y="26" width="102" height="1" forecolor="#000000" backcolor="#FFFFFF" uuid="5f21f71e-b42a-4c2b-8d9d-b1ddadd3651e"/>
+				<graphicElement fill="Solid"/>
+			</line>
+			<staticText>
+				<reportElement x="419" y="161" width="115" height="20" uuid="ebe28c73-13ef-4948-9129-7d9207849c5b"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Customer Signathure]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="161" width="62" height="20" uuid="c5538a4e-c99e-4fe0-a498-07f41f57f549"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Autuorize by]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="141" width="100" height="20" uuid="17cc890f-0977-4892-9367-b976de08f090"/>
+				<text><![CDATA[....................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="419" y="141" width="100" height="20" uuid="1832a3e1-b175-4563-b9d2-752950c7118e"/>
+				<text><![CDATA[....................................]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="85" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="32" width="555" height="20" uuid="9d60a8c0-e9a0-47fd-b031-b7ed0cf26ab4"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Thanks for your payment]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="68" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="41" width="555" height="20" forecolor="#000000" uuid="c33b49fb-6cf4-41da-9516-860296153745"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Software by Miracle Solutions | Hotline: 077 198 1680]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="22" width="555" height="1" uuid="44f44c9f-e928-4a48-9df0-9a0505771d7f"/>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="57" splitType="Stretch"/>
+	</summary>
+</jasperReport>
